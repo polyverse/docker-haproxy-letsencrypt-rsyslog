@@ -8,6 +8,6 @@ RUN apt-get update && apt-get install rsyslog -y && \
 ADD haproxy.conf /etc/rsyslog.d
 COPY docker-entrypoint.sh /
 
-EXPOSE 80,443
+EXPOSE 80 443
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
