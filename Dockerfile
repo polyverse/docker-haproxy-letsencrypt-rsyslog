@@ -1,5 +1,5 @@
 FROM haproxy:latest
-MAINTAINER Rafal Pieniazek <rafal.pieniazek@solvinity.com>
+MAINTAINER RafPe
 
 RUN apt-get update && apt-get install rsyslog -y && \
     sed -i 's/#$ModLoad imudp/$ModLoad imudp/g' /etc/rsyslog.conf && \
