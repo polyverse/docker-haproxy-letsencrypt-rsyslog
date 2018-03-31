@@ -1,11 +1,11 @@
 FROM haproxy:latest
 MAINTAINER RafPe
 
-RUN apt-get update && apt-get install rsyslog -y && \
-    sed -i 's/#$ModLoad imudp/$ModLoad imudp/g' /etc/rsyslog.conf && \
-    sed -i 's/#$UDPServerRun 514/$UDPServerRun 514/g' /etc/rsyslog.conf
+RUN apt-get update && apt-get install rsyslog -y
 
 ADD haproxy.conf /etc/rsyslog.d
+ADD rsyslog.conf /etc/rsyslog.conf
+
 COPY docker-entrypoint.sh /
 
 LABEL org.label-schema.build-date="2016-06-20T10:23:04Z" \
