@@ -9,5 +9,8 @@ touch /var/log/haproxy.log
 # Throw the log to output
 tail -f /var/log/haproxy.log &
 
+# Do certs stuff...
+/certs.sh 
+
 # Start haproxy
 exec haproxy -f /usr/local/etc/haproxy/haproxy.cfg
