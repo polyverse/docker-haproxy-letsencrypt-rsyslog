@@ -1,4 +1,4 @@
-FROM haproxy:latest
+FROM  bradjonesllc/docker-haproxy-letsencrypt
 MAINTAINER RafPe
 
 RUN apt-get update && apt-get install rsyslog -y
